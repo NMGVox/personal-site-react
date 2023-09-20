@@ -55,7 +55,7 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(94deg, rgba(8, 5, 12, 0.623) 15%, rgba(9, 0, 15, 0.774) 89%), url('./images/spacebg.jpg');
+    background-image: linear-gradient(94deg, rgba(8, 5, 12, 0.623) 15%, rgba(9, 0, 15, 0.774) 89%), url('./img/purple_nebula_bg.png');
     background-size: cover;
     box-sizing: border-box;
     border: 5px solid black;
