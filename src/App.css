@@ -62,6 +62,15 @@ table {
     border-bottom: none;
 }
 
+/* @keyframes bgScroll {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 0px 1024px;
+    }
+} */
+
 .introContentWrap {
     width: 50vw;
     height: auto;
@@ -80,12 +89,12 @@ table {
     overflow: hidden;
     box-sizing: border-box;
     animation: shadowPulsate 4s infinite;
-    box-shadow: 0px 0px 4px 4px rgb(33, 4, 80);
+    box-shadow: 0px 0px 2px 4px rgb(13, 1, 43);
 }
 
 @keyframes shadowPulsate{
     50% {
-      box-shadow: 0px 0px 10px 10px rgb(33, 4, 80);
+      box-shadow: 0px 0px 4px 10px rgb(13, 1, 43);
     }
 }
 

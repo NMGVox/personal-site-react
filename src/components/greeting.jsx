@@ -9,7 +9,7 @@ const Greeting = () => {
             </div>
             <div className="introTextContainer">
                 <h1 className="greeting">
-                    ~~Hello!~~
+                    Hello!
                 </h1>
                 <h2>
                     My name is NMGVox! Welcome to my personal website!
