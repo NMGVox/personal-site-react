@@ -12,13 +12,18 @@ async function retrieveData() {
 
     try {
         const snapshot = await getDocs(colRef);
+        if(snapshot.empty) {
+            console.log("There is nothing here.");
+            return null;
+        }
         const skills = [];
         snapshot.docs.forEach((doc) => {
             skills.push({ ...doc.data() });
         });
-        console.log(skills);
+        return skills;
     } catch(error) {
-        console.log(error.message);
+        console.log(`There was an issue querying the firestore database : ${error}`);
+        throw error;
     }
 }
 

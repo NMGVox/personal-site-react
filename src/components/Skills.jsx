@@ -1,4 +1,18 @@
+import { useEffect, useState } from 'react';
+import retrieveData from './RetireveData'
+
 const Skills = () => {
+    const [skills, setSkills] = useState([]);
+
+    useEffect(() => {
+        const myData = async () => {
+        const data = await retrieveData();
+        setSkills(data);
+        };
+
+        myData();
+    }, []);
+
     return (
         <section className="about-section" id="skills">
             <h2 className="section-header">
