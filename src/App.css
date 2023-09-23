@@ -398,7 +398,7 @@ table {
 }
 
 .contact-type {
-    width: clamp(50px, 3.5vw, 75px);
+    width: clamp(25px, 3.5vw, 50px);
     aspect-ratio: 1 / 1;
     filter: invert(9%) sepia(85%) saturate(4108%) hue-rotate(280deg) brightness(91%) contrast(123%);
 }

@@ -1,3 +1,7 @@
+import NJITLogo from '../img/NJIT_logo.png';
+import HCCCLogo from '../img/hccc_logo.png';
+import HobbyList from './HobbyList';
+
 const About = () => {
     return (
         <section className="about-section">
@@ -21,7 +25,7 @@ const About = () => {
                         <h1 className="education-header">
                             New Jersey Institute of Technology
                         </h1>
-                        <img className="edu-logo" src="./images/njit logo_0.png" alt="Logo" />
+                        <img className="edu-logo" src={NJITLogo} alt="Logo" />
                     </div>
                     <p>Major - Computer Science</p>
                     <p>GPA: 3.84</p>
@@ -32,7 +36,7 @@ const About = () => {
                         <h1 className="education-header">
                             Hudson County Community College
                         </h1>
-                        <img className="edu-logo" src="./images/hccc_logo.png" alt="Logo" />
+                        <img className="edu-logo" src={HCCCLogo} alt="Logo" />
                     </div>
                     <p>Major - Computer Technology</p>
                     <p>GPA: 3.8</p>
@@ -44,14 +48,7 @@ const About = () => {
                     Hobbies
                 </h3>
                 <p>When I'm not programming, I'm indulging in one of the many hobbies below:</p>
-                <ul className="hobby-list">
-                    <li>Making 3D animations</li>
-                    <li>Listening to music</li>
-                    <li>All things football</li>
-                    <li>Badminton</li>
-                    <li>Gaming</li>
-                    <li>Photography</li>
-                </ul>
+                <HobbyList />
             </article>
         </div>
     </section>
