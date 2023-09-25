@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
 import retrieveData from './RetireveData'
+import SkillGrid from './SkillGrid';
 
 const Skills = () => {
     const [skills, setSkills] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const myData = async () => {
         const data = await retrieveData();
         setSkills(data);
+        setLoading(false);
         };
-
         myData();
     }, []);
 
@@ -19,28 +21,41 @@ const Skills = () => {
                 My Skills
             </h2>
             <div className="skill-wrap">
-                <article className="skill-cat">
+                {loading ? <h1>Loading...</h1> : (<> <article className="skill-cat">
                     <h3 className="skill-header">Languages</h3>
-                    <div id="lang" className="skill-grid">
-
-                    </div>
+                    <SkillGrid 
+                        type="lang"
+                        skillList={skills}
+                    />
                 </article>
                 <article className="skill-cat">
                     <h3 className="skill-header">Tools</h3>
-                    <div id="tools" className="skill-grid"></div>
+                    <SkillGrid 
+                        type="tools"
+                        skillList={skills}
+                    />
                 </article>
                 <article className="skill-cat">
                     <h3 className="skill-header">Libraries</h3>
-                    <div id="libraries" className="skill-grid"></div>
+                    <SkillGrid 
+                        type="libraries"
+                        skillList={skills}
+                    />
                 </article>
                 <article className="skill-cat">
                     <h3 className="skill-header">Database Management</h3>
-                    <div id="databases" className="skill-grid"></div>
+                    <SkillGrid 
+                        type="databases"
+                        skillList={skills}
+                    />
                 </article>
                 <article className="skill-cat">
                     <h3 className="skill-header">Platforms</h3>
-                    <div id="platforms" className="skill-grid"></div>
-                </article>
+                    <SkillGrid 
+                        type="platforms"
+                        skillList={skills}
+                    />
+                </article> </>)}
             </div>
         </section>
     )
