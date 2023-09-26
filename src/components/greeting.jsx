@@ -1,8 +1,22 @@
 import Portrait from '../img/niko.jpg';
+import Nebula from '../img/purple_nebula_bg.png';
 
 const Greeting = () => {
+    function scrollDown() {
+        window.scrollTo({
+            top: window.innerHeight + 1,
+            left: 0,
+            behavior: "smooth",
+        });
+    }
+
     return(
         <section className="intro-container">
+            <div className="background-contain">
+                <img className='greeting-bg' src={Nebula} alt="Scrolling Background" />
+                <img className='greeting-bg' src={Nebula} alt="Scrolling Background" />
+                <img className='greeting-bg' src={Nebula} alt="Scrolling Background" />
+            </div>
         <div className="introContentWrap">
             <div className="portrait">
                 <img src={Portrait} alt="Portrait"/>
@@ -16,6 +30,9 @@ const Greeting = () => {
                 </h2>
             </div>
         </div>
+        <button onPointerDown={scrollDown} className="scrollDown">
+            Scroll Down
+        </button>
     </section>
     )
 }

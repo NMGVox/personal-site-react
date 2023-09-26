@@ -49,33 +49,68 @@ table {
 }
 /* RESET ENDS */
 
+button:hover {
+    cursor: pointer;
+}
+
 .intro-container {
     min-height:100vh;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(94deg, rgba(8, 5, 12, 0.623) 15%, rgba(9, 0, 15, 0.774) 89%), url('./img/purple_nebula_bg.png');
+    background-image: linear-gradient(90deg, rgba(8, 5, 12, 0.623) 15%, rgba(9, 0, 15, 0.774) 89%);
     background-size: cover;
     box-sizing: border-box;
     border: 5px solid black;
     border-bottom: none;
+    position:relative;
+    overflow: hidden;
+    z-index: 1;
 }
-
-/* @keyframes bgScroll {
-    0% {
-        background-position: 0px 0px;
-    }
-    100% {
-        background-position: 0px 1024px;
-    }
-} */
 
 .introContentWrap {
     width: 50vw;
     height: auto;
     display:flex;
     gap: 2vw;
+    position: relative;
+    z-index: 2;
+}
+
+.background-contain {
+    overflow: hidden;
+    white-space: nowrap;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    animation: imageScroll 20s infinite linear;
+    display:flex;
+    box-sizing: border-box;
+}
+
+.scrollDown {
+    position: absolute;
+    bottom:0%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border: none;
+    color:white;
+    font-size: 32px;
+}
+
+@keyframes imageScroll {
+    0% {
+        transform: translate(0%, 0%);
+    }    
+
+    100% {
+        transform: translate(-1080px, 0);
+    }
 }
 
 .portrait {
@@ -150,7 +185,7 @@ table {
     width: 60vw;
     min-height: 40vh;
     background-color: rgba(138, 138, 138, 0);
-    border: 1px solid rgb(68, 2, 88);
+    border: 2px solid rgba(65, 1, 65, 0.507);
     border-radius: 12px;
 }
 
@@ -173,8 +208,8 @@ table {
 
 .divider {
     display:inline-block;
-    border-left: 1px solid rgb(68, 2, 88);
-    border-right: 1px solid rgb(68, 2, 88);
+    border-left: 1px solid rgba(65, 1, 65, 0.507);
+    border-right: 1px solid rgba(65, 1, 65, 0.507);
     align-self: center;
     height: 40vh;
 }
@@ -199,7 +234,7 @@ table {
 }
 
 .edu-wrap:first-of-type {
-    border-bottom: 1px solid rgb(68, 2, 88);
+    border-bottom: 1px solid rgba(65, 1, 65, 0.507);
 }
 
 .edu-wrap p {
@@ -314,6 +349,12 @@ table {
     flex-basis: 30%;
     padding: 1rem;
     gap: 1vh;
+    border-radius: 8px;
+    transition: box-shadow .4s ease-in-out;
+}
+
+.skill-cat:hover {
+    box-shadow: 0px 0px 8px 8px rgba(65, 1, 65, 0.507);
 }
 
 .skill-header {
@@ -335,6 +376,11 @@ table {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: transform .2s linear;
+}
+
+.skill:hover {
+    transform: scale(1.1) rotateZ(-5deg);
 }
 
 .skill img {
@@ -350,6 +396,7 @@ table {
 
 #contact {
     min-height: 25vh;
+    background-image: linear-gradient(90deg, rgba(7, 2, 14, 0.74) 15%, rgba(9, 0, 15, 0.774) 89%);
 }
 
 .contact-wrapper {
