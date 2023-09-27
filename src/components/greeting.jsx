@@ -1,7 +1,33 @@
 import Portrait from '../img/niko.jpg';
 import Nebula from '../img/purple_nebula_bg.png';
+import ArrowDown from '../img/arrow_down.svg'
+import { useState } from 'react';
 
 const Greeting = () => {
+    const [showScroll, setShowScroll] = useState(true);
+
+    function showHideScroll() {
+        const pos = window.scrollY;
+        console.log(pos);
+        if (pos > 30) {
+            setShowScroll(false);
+            return;
+        }
+        setShowScroll(true);
+        return;
+    }
+
+    function debounce(callback, wait) {
+        let timeout;
+        return (...args) => {
+            const context = this;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => callback.apply(context, args), wait);
+        };
+    }
+
+    window.addEventListener("scroll", debounce(showHideScroll, 500));
+    
     function scrollDown() {
         window.scrollTo({
             top: window.innerHeight + 1,
@@ -30,9 +56,11 @@ const Greeting = () => {
                 </h2>
             </div>
         </div>
-        <button onPointerDown={scrollDown} className="scrollDown">
-            Scroll Down
-        </button>
+        {showScroll &&
+            <button onPointerDown={scrollDown} className="scrollDown">
+                <img src={ArrowDown} /> Scroll Down <img src={ArrowDown} />
+            </button>
+        }
     </section>
     )
 }
