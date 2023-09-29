@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { retrieveProjects } from './RetireveData';
+import ProjectWrapper from './PojectWrapper';
 
 const Projects = () => {
     const [projects, setProjects] = useState([]);
@@ -15,7 +16,7 @@ const Projects = () => {
     }, []);
 
     useEffect(() => {
-        console.log(projects)
+        console.log(projects);
     }, [projects]);
 
     return (
@@ -23,9 +24,13 @@ const Projects = () => {
             <h2 className="section-header">
                 Projects
             </h2>
-            {loading &&
-                
-            }
+            {loading ?
+                <h2>LOADING...</h2>
+            :
+                <ProjectWrapper 
+                    projects={projects}
+                />
+            } 
         </section>
     )
 }

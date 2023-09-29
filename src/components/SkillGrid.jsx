@@ -9,7 +9,6 @@ const SkillGrid = ({ type, skillList }) => {
         const newList = skillList.filter((skill) => 
             skill.type === type
         );
-        console.log(newList);
         setFilteredList(newList);
     }, []);
 
