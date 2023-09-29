@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { PropTypes } from "prop-types";
+import ProjectDetail from "./ProjectDetail";
 
 const ProjectWrapper = ({ projects }) => {
     const [projIndex, setProjIndex] = useState(7);
@@ -23,7 +24,9 @@ const ProjectWrapper = ({ projects }) => {
     return (
         <div className="projOuterWrapper">
             <button onPointerDown={advanceLeft}> Left </button>
-            <div>{projects[projIndex].name}</div>
+            <ProjectDetail 
+                project={projects[projIndex]}
+            />
             <button onPointerDown={advanceRight}> Right </button>
         </div>
     )
