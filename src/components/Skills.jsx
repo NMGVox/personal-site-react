@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import retrieveData from './RetireveData'
+import { retrieveSkills } from './RetireveData';
 import SkillGrid from './SkillGrid';
 
 const Skills = () => {
@@ -8,7 +8,7 @@ const Skills = () => {
 
     useEffect(() => {
         const myData = async () => {
-        const data = await retrieveData();
+        const data = await retrieveSkills();
         setSkills(data);
         setLoading(false);
         };
