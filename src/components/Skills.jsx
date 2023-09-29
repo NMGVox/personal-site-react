@@ -8,9 +8,9 @@ const Skills = () => {
 
     useEffect(() => {
         const myData = async () => {
-        const data = await retrieveSkills();
-        setSkills(data);
-        setLoading(false);
+            const data = await retrieveSkills();
+            setSkills(data);
+            setLoading(false);
         };
         myData();
     }, []);
