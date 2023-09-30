@@ -329,6 +329,11 @@ button:hover {
     box-shadow: 2px 2px 2px 6px rgb(8, 0, 29);
 }
 
+.generic-flex {
+    display:flex;
+    width: 90%;
+}
+
 .projOuterWrapper {
     display:flex;
     justify-content: space-between;
@@ -340,6 +345,7 @@ button:hover {
     border-radius: 8px;
     max-height: 600px;
     overflow: hidden;
+    position:relative;
 }
 
 .projInnerWrapper {
@@ -347,6 +353,7 @@ button:hover {
     gap: 24px;
     background-color: rgba(0, 0, 0, 0.486);
     padding: 12px 12px;
+    border: 4px solid black;
 }
 
 .projectCell {
@@ -375,10 +382,15 @@ button:hover {
     gap: 1vw;
 }
 
-.left-arrow,
-.right-arrow {
-    height: 6vh;
-    aspect-ratio: 1/1;
+.advanceSlide {
+    background-color: transparent;
+    border: none;
+}
+
+.arrows {
+    height: 32px;
+    width: auto;
+    filter: invert(39%) sepia(16%) saturate(1714%) hue-rotate(220deg) brightness(92%) contrast(86%);
 }
 
 .skill-wrap {
@@ -550,28 +562,57 @@ button:hover {
     }
 }
 
-.projInner-enter {
+/** ===PROJECT SECTION ANIMATED SWIPES===**/
+/** ===SWIPE LEFT===**/
+.swipeLeft-enter {
     transform: translateX(-1920px);
 }
 
-.projInner-enter-active {
+.swipeLeft-enter-active {
     transform: translateX(0);
     transition: transform 500ms;
 }
 
-.projInner-enter-done {
+.swipeLeft-enter-done {
     transform: translateX(0);
 }
 
-.projInner-exit {
+.swipeLeft-exit {
     transform: translateX(0);
 }
 
-.projInner-exit-active {
+.swipeLeft-exit-active {
     transform: translateX(1920px);
     transition: transform 500ms;
 }
 
-.projInner-exit-done {
+.swipeLeft-exit-done {
     transform: translateX(1920px);
+}
+
+/** ===SWIPE RIGHT=== **/
+.swipeRight-enter {
+    transform: translateX(1920px);
+}
+
+.swipeRight-enter-active {
+    transform: translateX(0);
+    transition: transform 500ms ease-in-out;
+}
+
+.swipeRight-enter-done {
+    transform: translateX(0);
+}
+
+.swipeRight-exit {
+    transform: translateX(0);
+}
+
+.swipeRight-exit-active {
+    transform: translateX(-1920px);
+    transition: transform 500ms ease-in-out;
+}
+
+.swipeRight-exit-done {
+    transform: translateX(-1920px);
 }
