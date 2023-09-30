@@ -8,7 +8,6 @@ const Greeting = () => {
 
     function showHideScroll() {
         const pos = window.scrollY;
-        console.log(pos);
         if (pos > 30) {
             setShowScroll(false);
             return;

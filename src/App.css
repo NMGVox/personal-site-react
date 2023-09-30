@@ -549,3 +549,29 @@ button:hover {
         flex-direction: column;
     }
 }
+
+.projInner-enter {
+    transform: translateX(-1920px);
+}
+
+.projInner-enter-active {
+    transform: translateX(0);
+    transition: transform 500ms;
+}
+
+.projInner-enter-done {
+    transform: translateX(0);
+}
+
+.projInner-exit {
+    transform: translateX(0);
+}
+
+.projInner-exit-active {
+    transform: translateX(1920px);
+    transition: transform 500ms;
+}
+
+.projInner-exit-done {
+    transform: translateX(1920px);
+}
