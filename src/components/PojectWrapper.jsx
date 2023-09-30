@@ -17,9 +17,9 @@ const ProjectWrapper = ({ projects }) => {
         await new Promise(resolve => setTimeout(resolve, 250));
         if(projIndex === 0) {
             setProjIndex(projects.length - 1);
-            return
+        }else{
+            setProjIndex((prevIndex) => (prevIndex - 1));
         }
-        setProjIndex((prevIndex) => (prevIndex - 1));
         setIsEnter(true);
     }
 
@@ -29,9 +29,9 @@ const ProjectWrapper = ({ projects }) => {
         await new Promise(resolve => setTimeout(resolve, 250));
         if(projIndex === projects.length-1) {
             setProjIndex(0);
-            return
+        }else{
+            setProjIndex((prevIndex) => (prevIndex + 1));
         }
-        setProjIndex((prevIndex) => (prevIndex + 1));
         setIsEnter(true);
     }
 

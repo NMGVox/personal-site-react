@@ -2,12 +2,13 @@ import { PropTypes } from "prop-types";
 import { useState } from "react";
 
 const ProjectDetail = ({ project }) => {
+    console.log(project);
     return (
             <div className="projInnerWrapper">
                 <article className="projectCell">
                     <h2 className="projectName">{project.name}</h2>
                     <img className="projectImage" src={project.pic[0] !== 'null' ? project.pic[0] : ''} alt={`${project.name} preview`} />
-                    <p>Tech Stack: {project.stack}</p>
+                    <p className="stack"><i>Tech Stack: {project.stack}</i></p>
                 </article>
                 <article className="projectCell">
                     <span className="projectDescription">
