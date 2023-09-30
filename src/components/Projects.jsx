@@ -15,10 +15,6 @@ const Projects = () => {
         myData();
     }, []);
 
-    useEffect(() => {
-        console.log(projects);
-    }, [projects]);
-
     return (
         <section className="about-section" id="projects">
             <h2 className="section-header">

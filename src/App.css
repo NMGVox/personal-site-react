@@ -368,8 +368,9 @@ button:hover {
     font-size: 48px;
     font-weight: bold;
     background: -webkit-linear-gradient(-86deg, #1b013d 5%, #1f0241 53%, #1d002c 91%);
-  -webkit-background-clip: text;
-  -webkit-text-stroke: 4px transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 4px transparent;
   color: white;
 }
 
@@ -646,4 +647,31 @@ button:hover {
 
 .swipeRight-exit-done {
     transform: translateX(-1920px);
+}
+
+/** ===PROJECT SECTION ANIMATED FADES===**/
+.fade-enter {
+    opacity: .1;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.fade-enter-done {
+    opacity: 1;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: .1;
+    transition: opacity 500ms;
+}
+
+.fade-exit-done {
+    opacity: .1;
 }
