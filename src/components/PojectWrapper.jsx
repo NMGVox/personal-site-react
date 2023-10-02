@@ -49,6 +49,7 @@ const ProjectWrapper = ({ projects }) => {
                 >
                         <div ref={nodeRef}>
                             <ProjectDetail
+                                key={projects[projIndex].name}
                                 project={projects[projIndex]}
                             />
                         </div>

@@ -1,10 +1,11 @@
 import { PropTypes } from "prop-types";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { CSSTransition } from 'react-transition-group';
 
 const ProjectDetail = ({ project }) => {
     const [currentPic, setCurrentPic] = useState(0);
     const [isEnter, setIsEnter] = useState(true);
+    const nodeRef = useRef(null); 
 
     //Need an interval that controls which picture is displayed.
     useEffect(() => {
@@ -26,6 +27,10 @@ const ProjectDetail = ({ project }) => {
 
     }, [currentPic, project.pic]);
 
+    useEffect(()=> {
+        console.log(currentPic);
+    }, []);
+
     return (
             <div className="projInnerWrapper">
                 <article className="projectCell">
@@ -34,8 +39,9 @@ const ProjectDetail = ({ project }) => {
                         in={isEnter}
                         timeout={500}
                         classNames='fade'
+                        nodeRef={nodeRef}
                     >
-                        <img className="projectImage"
+                        <img ref={nodeRef} className="projectImage"
                             src={project.pic[currentPic] !== 'null' ? project.pic[currentPic] : ''}
                             alt={`${project.name} preview`}
                         />
