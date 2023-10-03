@@ -1,6 +1,7 @@
 import { PropTypes } from "prop-types";
 import { useEffect, useState, useRef } from "react";
 import { CSSTransition } from 'react-transition-group';
+import placeholder from '../img/Placeholder.png';
 
 const ProjectDetail = ({ project }) => {
     const [currentPic, setCurrentPic] = useState(0);
@@ -42,7 +43,7 @@ const ProjectDetail = ({ project }) => {
                         nodeRef={nodeRef}
                     >
                         <img ref={nodeRef} className="projectImage"
-                            src={project.pic[currentPic] !== 'null' ? project.pic[currentPic] : ''}
+                            src={project.pic[currentPic] !== 'null' ? project.pic[currentPic] : placeholder}
                             alt={`${project.name} preview`}
                         />
                     </CSSTransition>

@@ -13,7 +13,12 @@ const About = () => {
                 <h3 className="about-element-header">
                     Who am I?
                 </h3>
-                <p>I am a versatile developer, comfortable with blah blah</p>
+                <p>I am an open-minded, and versatile software developer.
+                    <br></br>
+                    I love learning new things, and I am always open to 
+                    constructive criticism related to my work.
+                    <br />
+                    </p>
             </article>
             <span className="divider"></span>
             <article className="about-element">
