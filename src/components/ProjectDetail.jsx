@@ -54,9 +54,9 @@ const ProjectDetail = ({ project }) => {
                         <p>{project.description}</p>
                     </span>
                     <span className="button-container">
-                        <button onClick={() => window.location.href=`${project.source}`}>Source Code</button>
+                        <button onClick={() => window.open(`${project.source}`, '_blank')}>Source Code</button>
                         {project.demo !== 'null' &&
-                            <button onClick={() => window.location.href=`${project.demo}`}>Demo</button>
+                            <button onClick={() => window.open(`${project.demo}`, '_blank')}>Demo</button>
                         }
                     </span>
                 </article>

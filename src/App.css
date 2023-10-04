@@ -1,3 +1,30 @@
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: lighter;
+    src: url('./fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: lighter;
+    src: url('./fonts/Roboto-LightItalic.ttf');
+}
+
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    src: url('./fonts/Roboto-Bold.ttf');
+}
+
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -60,6 +87,7 @@ button:hover {
     --fontSizeHeader: clamp(32px, 3vw, 48px);
     --mainBoxShadow: 1px 1px 2px 2px rgba(10, 0, 39, 0.849);
     --mainContainerColor: rgba(19, 11, 37, 0.534);
+    font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 .intro-container {
@@ -252,7 +280,7 @@ button:hover {
     background-color: rgba(138, 138, 138, 0);
     border: 2px solid rgba(65, 1, 65, 0.507);
     border-radius: 12px;
-    font-size: var(--fontSizeMed);
+    font-size: var(--fontSizeSmall);
 }
 
 @media screen and (max-width: 1320px) {
@@ -271,6 +299,7 @@ button:hover {
     padding: 1rem 1rem;
     gap: clamp(1rem, 1vh, 2rem);
     line-height: 1.3;
+    font-weight: lighter;
 }
 
 .divider {
@@ -282,7 +311,7 @@ button:hover {
 }
 
 .about-element-header {
-    font-size: clamp(1.3rem, 1.15vw, 2rem);
+    font-size: var(--fontSizeMed);
     font-weight: bold;
     text-decoration: underline;
     margin-bottom: 1vh;
@@ -652,6 +681,9 @@ button:hover {
         justify-content: center;
         flex-direction: column;
     }
+    .skill-cat {
+        min-height: auto;
+    }
     .skill-grid {
         border: 2px solid var(--mainContainerColor);
         border-radius: 8px;
@@ -659,9 +691,14 @@ button:hover {
         grid-template-columns: repeat(auto-fit, minmax(75px, 100px));
         max-width: 90vw;
     }
-    .skill {
-        font-size: clamp(8px, .4vw, 12px);
+    .skill h4 {
+        font-size: clamp(10px, .6vw, 14px);
         text-align: center;
+    }
+    .skill img {
+        width: clamp(32px, 5vw, 100px);
+        aspect-ratio: 1/1;
+        border-radius: 20%;
     }
 }
 
