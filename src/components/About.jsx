@@ -13,11 +13,15 @@ const About = () => {
                 <h3 className="about-element-header">
                     Who am I?
                 </h3>
-                <p>I am an open-minded, and versatile software developer.
-                    <br></br>
-                    I love learning new things, and I am always open to 
+                <p>I am an open-minded, motivated, and versatile software developer, who loves
+                    learning new things. And I am always open to 
                     constructive criticism related to my work.
                     <br />
+                    I'm a graduate of the New Jersey Institute of Technology's 
+                    computer science program. I have been coding acadmeically and
+                    independently for close to a decade.
+                    <br />
+                    Below, you can check out some of the projects I've worked on.
                     </p>
             </article>
             <span className="divider"></span>

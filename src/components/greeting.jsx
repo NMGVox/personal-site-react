@@ -51,7 +51,7 @@ const Greeting = () => {
                     Hello!
                 </h1>
                 <h2>
-                    My name is NMGVox! Welcome to my personal website!
+                    My name is Nijee Greene! Welcome to my personal portfolio site!
                 </h2>
             </div>
         </div>
