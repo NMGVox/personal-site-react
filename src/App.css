@@ -113,7 +113,7 @@ button:hover {
     gap: 2vw;
     position: relative;
     z-index: 2;
-    background-image: linear-gradient(90deg, rgba(8, 5, 12, 0.623) 15%, rgba(9, 0, 15, 0.774) 89%);
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.89) 15%, rgba(9, 1, 14, 0.836) 89%);
     padding: 32px 32px;
     border-radius: 16px;
 }
@@ -125,9 +125,10 @@ button:hover {
     top: 0;
     left: 0;
     z-index: 0;
-    animation: imageScroll 20s infinite linear;
+    /* animation: imageScroll 20s infinite linear; */
     display:flex;
     box-sizing: border-box;
+    transform: scale(2);
 }
 
 .scrollDown {
@@ -573,8 +574,9 @@ button:hover {
 }
 
 .skill h4 {
-    font-size: 1rem;
+    font-size: var(--fontSizeTiny);
     text-decoration: underline;
+    text-align: center;
 }
 
 #contact {

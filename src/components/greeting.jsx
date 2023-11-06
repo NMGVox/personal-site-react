@@ -1,4 +1,4 @@
-import Portrait from '../img/niko.jpg';
+import Portrait from '../img/me.jpg';
 import Nebula from '../img/purple_nebula_bg.png';
 import ArrowDown from '../img/arrow_down.svg'
 import { useState } from 'react';
@@ -51,7 +51,7 @@ const Greeting = () => {
                     Hello!
                 </h1>
                 <h2>
-                    My name is Nijee Greene! Welcome to my personal portfolio site!
+                    My name is Nijee Greene - A software developer from New Jersey. Welcome to my site!
                 </h2>
             </div>
         </div>
